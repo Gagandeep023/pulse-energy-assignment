@@ -5,6 +5,7 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const credentials = require('./middleware/credentials');
 const { logger } = require('./middleware/logEvents');
+const port= process.env.port || 3500
 
 const app = express();
 
@@ -21,7 +22,7 @@ app.use(require('./routes'));
 
 
 db.sequelize.sync().then((req) => {
-  app.listen(process.env.port, () => {
-    console.log('Server listening at http://localhost:' + process.env.port);
+  app.listen(port, () => {
+    console.log('Server listening at http://localhost:' + port);
   });
 });
