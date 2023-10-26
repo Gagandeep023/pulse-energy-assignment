@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Gagandeep023/pulse-energy-assignment#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "cors": "^2.8.5",
     "csv": "^6.3.5",
     "csv-parse": "^5.5.2",
