@@ -1,9 +1,11 @@
 const mqtt = require("mqtt");
 const fs = require('fs');
 var { parse } = require("csv-parse")
+const args = process.argv.slice(2);
+console.log(args);
 
 var client = mqtt.connect("mqtt://broker.hivemq.com");
-let clientId = "3DgBCXm0cRF6t1nb54b";
+let clientId = args[0];
 const dataOfclient = [];
 
 const publishDataForID = (data) => {
