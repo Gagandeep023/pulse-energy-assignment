@@ -26,9 +26,7 @@ client.on('message', async (topic, message) => {
       console.error('No payload found in the input string.');
     }
 
-    console.log(chargePointId, Payload);
     const uuidToken = uuid.v4();
-    console.log(uuidToken);
     const newRecords = new MeterValueRecords({
         uuid: uuidToken,
         charge_point_id: chargePointId,
