@@ -43,9 +43,7 @@ client.on('message', async (topic, message) => {
             })
 
     } catch (err) {
-
-        res.json({ success: false, msg: err });
-
+        console.log(err)
     }
     
 })
